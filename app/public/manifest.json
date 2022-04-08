@@ -39,5 +39,5 @@
       "*://d2e6m6xd8gefnd.cloudfront.net/*"
     ]
   },
-  "content_security_policy": "script-src 'self' 'sha256-Yz38pVh4j0dMPPM0/nizBBlkxZy6btqUdKCJ/YQigB0='; object-src 'self'"
+  "content_security_policy": "script-src 'self' 'sha256-BNNoJUkPdnYFL6lm6BzG8812N/dhgcyTorZpUJlZh04='; object-src 'self'"
 }
