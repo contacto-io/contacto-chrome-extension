@@ -148,7 +148,7 @@ class AppPreferences extends Component {
           alignItems="center"
           className={classes.footer}
           onClick={() => {
-            const href = 'contacto-qa://open-app'
+            const href = 'contacto://open-app'
             chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
               var tab = tabs[0]
               chrome.tabs.update(tab.id, { url: href })

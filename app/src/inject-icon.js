@@ -53,7 +53,7 @@ const clickToCallAction = event => {
   const phoneNumber = targetElement.getAttribute('data-ph')
   chrome.storage.local.get(['dialDirectly'], function(result) {
     const shouldDialDirectly = !!result.dialDirectly
-    let updatedURL = `contacto-qa://call/${phoneNumber}?shouldDialDirectly=${shouldDialDirectly}`
+    let updatedURL = `contacto://call/${phoneNumber}?shouldDialDirectly=${shouldDialDirectly}`
     if (crmId) {
       // TODO: Remove changes added to avoid crash in older desktop app version once all users are on updated version
       updatedURL = `${updatedURL}://call/${phoneNumber}?shouldDialDirectly=${shouldDialDirectly}&crmId=${crmId}`
