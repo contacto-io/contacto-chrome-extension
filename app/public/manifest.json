@@ -1,0 +1,43 @@
+{
+  "name": "Contacto",
+  "version": "0.3.5",
+  "description": "Call any phone number from any web page.",
+  "web_accessible_resources": ["public/*", "sellular-call.png"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inject-icon.js"],
+      "exclude_matches": [
+        "*://*.sellulardev.io/*",
+        "*://*.sellular.com/*",
+        "*://*.sellularapp.com/*",
+        "*://localhost/*",
+        "*://d345is6au6er0u.cloudfront.net/*",
+        "*://d2e6m6xd8gefnd.cloudfront.net/*",
+        "*://*.docs.google.com/spreadsheets/*",
+        "*://*.onedrive.live.com/*",
+        "*://*.quip.com/*",
+        "*://*.tableau.com/*"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Contacto chrome extension",
+    "default_popup": "index.html"
+  },
+  "manifest_version": 2,
+  "permissions": ["https://*/*", "http://*/*", "tabs", "storage"],
+  "externally_connectable": {
+    "matches": [
+      "*://*.sellularapp.com/*",
+      "*://d345is6au6er0u.cloudfront.net/*",
+      "*://d2e6m6xd8gefnd.cloudfront.net/*"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'sha256-Yz38pVh4j0dMPPM0/nizBBlkxZy6btqUdKCJ/YQigB0='; object-src 'self'"
+}

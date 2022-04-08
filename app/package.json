@@ -1,0 +1,67 @@
+{
+  "name": "selluar-dialer-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.8.3",
+    "emotion": "^10.0.23",
+    "libphonenumber-js": "^1.7.27",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "^3.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "pretty-quick — staged",
+      "eslint",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "start": "REACT_APP_ENV=prod react-scripts start",
+    "start-stage": "REACT_APP_ENV=stage react-scripts start",
+    "webpack-build": "webpack --mode=production --progress --profile --colors",
+    "build-prod": "npm run webpack-build && REACT_APP_ENV=prod react-scripts build",
+    "build-stage": "npm run webpack-build && REACT_APP_ENV=stage react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy-stage": "npm run build-prod && aws s3 sync build/ s3://sellular-static && aws cloudfront create-invalidation --distribution-id E3QC0B3IMJPPQ0 --paths \"/*\"",
+    "deploy-prod": "npm run build-prod && aws s3 sync build/ s3://sellular-static-prod && aws cloudfront create-invalidation --distribution-id E3505CDMTSYFZV --paths \"/*\"",
+    "prettier": "prettier --write src/**/*.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^2.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-extension-reloader": "^1.1.2"
+  }
+}

@@ -1,0 +1,30 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+/app/public/background.js
+/app/public/background.js.map
+/app/public/inject-icon.js
+/app/public/inject-icon.js.map
+.pnp
+.pnp.js
+/.idea
+
+# testing
+coverage
+
+# production
+build
+dist
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
