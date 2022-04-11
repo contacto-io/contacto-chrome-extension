@@ -1,6 +1,6 @@
 {
   "name": "Contacto",
-  "version": "0.3.5",
+  "version": "0.0.1",
   "description": "Call any phone number from any web page.",
   "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
   "content_scripts": [
