@@ -116,31 +116,6 @@ class AppPreferences extends Component {
             </Typography>
             <Typography className={classes.titleText}>Chrome Extension</Typography>
           </Grid>
-          <Grid className={classes.optionsList}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="center"
-              className={classes.directDialWrapper}
-              onClick={this.toggleState}
-            >
-              <Typography className={classes.optionTitle} component="div">
-                Click-to-Dial
-              </Typography>
-              <CustomizedSwitch
-                className={classes.customizedSwitch}
-                checked={this.state.shouldDialDirectly}
-                color="primary"
-                inputProps={{ 'aria-label': 'primary checkbox' }}
-              />
-            </Grid>
-            <Grid className={classes.subList}>
-              <Typography className={classes.optionSubTitle}>
-                Automatically place calls with the default caller ID
-              </Typography>
-            </Grid>
-            <Divider light />
-          </Grid>
         </Grid>
         <Grid
           container
