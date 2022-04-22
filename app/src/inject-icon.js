@@ -96,7 +96,7 @@ const iconClassName = css`
   height: 12px !important;
 `
 
-const iconSrc = chrome.runtime.getURL('sellular-call.png')
+const iconSrc = chrome.runtime.getURL('contacto-call.png')
 
 const iconTemplate = `<span class='${iconContainerClassName}' data-ph='{{PHONE_NUMBER}}'>
   <img src='${iconSrc}' class='${iconClassName}' data-ph='{{PHONE_NUMBER}}'>

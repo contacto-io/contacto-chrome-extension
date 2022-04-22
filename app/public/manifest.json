@@ -32,7 +32,7 @@
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
   "web_accessible_resources": [{
-    "resources": ["sellular-call.png"],
+    "resources": ["contacto-call.png"],
     "matches": ["https://*/*"]
   }]
 }
