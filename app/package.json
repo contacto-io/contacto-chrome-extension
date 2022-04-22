@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.8.3",
     "emotion": "^10.0.23",
-    "libphonenumber-js": "^1.7.27",
+    "libphonenumber-js": "^1.9.20",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "^3.3.0"
