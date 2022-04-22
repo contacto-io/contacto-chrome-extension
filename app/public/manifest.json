@@ -1,6 +1,6 @@
 {
   "name": "Contacto",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Call any phone number from your helpdesk, CRM or any website.",
   "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
   "content_scripts": [
